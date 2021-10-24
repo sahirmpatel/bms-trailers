@@ -1,0 +1,26 @@
+.Header {
+  background-color: black;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 calc(100vh / 12);
+  align-items: center;
+
+  .left {
+    display: flex;
+    .logo {
+      margin-right: 15px;
+    }
+
+    button.btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: grey;
+      margin: 0 5px;
+      &.green {
+        background-color: rgb(46, 209, 128);
+      }
+    }
+  }
+}

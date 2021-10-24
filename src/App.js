@@ -2,6 +2,7 @@ import { MovieGrid } from "./components/MovieGrid";
 import axios from "axios";
 import { useEffect } from "react";
 import data from "./moviedata.json";
+import Header from "./components/Header";
 
 function App() {
   // useEffect(() => {
@@ -12,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>Movie Trailers</header>
+      <Header />
       <MovieGrid data={data} />
     </div>
   );

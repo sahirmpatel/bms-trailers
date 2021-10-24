@@ -30,9 +30,9 @@ export const Trailer = ({ trailerdata }) => {
 
         <div className="Trailer__info">
           <h3>{trailerdata.EventTitle}</h3>
-          <h5>{trailerdata.EventLanguage}</h5>
+          <p>{trailerdata.EventLanguage}</p>
           {trailerdata.EventGenre.split("|").map((genre) => {
-            return <span>{genre}</span>;
+            return <span className="tags">{genre}</span>;
           })}
         </div>
       </div>
