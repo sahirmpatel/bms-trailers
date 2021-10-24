@@ -9,13 +9,17 @@ export const MovieGrid = ({ data }) => {
       document.querySelector(".trailer").remove();
     }
 
-    // column changes based on window width
     let columns = 6;
 
+    // column changes based on window width
+    if (window.innerWidth <= 768) {
+      columns = 2;
+    } else if (window.innerWidth <= 1024) {
+      columns = 4;
+    }
     let targetElem = document.getElementById(
       Math.floor(id / columns + 1) * columns
     );
-    console.log(id);
 
     // console.log("data", newdata);
     let p = document.createElement("div");

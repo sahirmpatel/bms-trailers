@@ -13,3 +13,27 @@
   background-color: royalblue;
   grid-column: 1/7;
 }
+
+/* Smartphones (portrait) till 700px because ipad after 768 ----------- */
+@media only screen and (max-width: 700px) {
+  .moviegrid {
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(180, 105, 224);
+  }
+
+  .trailer {
+    grid-column: 1/3;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .moviegrid {
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(172, 188, 143);
+  }
+
+  .trailer {
+    grid-column: 1/5;
+  }
+}
