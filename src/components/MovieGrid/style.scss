@@ -1,0 +1,15 @@
+.moviegrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px;
+  background-color: rosybrown;
+
+  &__card {
+    border: 1px solid #333;
+  }
+}
+
+.trailer {
+  background-color: royalblue;
+  grid-column: 1/7;
+}
