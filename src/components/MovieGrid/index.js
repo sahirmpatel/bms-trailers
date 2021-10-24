@@ -1,4 +1,8 @@
 import React from "react";
+import ReactDOM from "react-dom";
+
+import MovieCard from "../MovieCard";
+import { Trailer } from "../Trailer";
 import "./style.scss";
 export const MovieGrid = ({ data }) => {
   let newdata = Object.values(data);
@@ -21,27 +25,24 @@ export const MovieGrid = ({ data }) => {
       Math.floor(id / columns + 1) * columns
     );
 
-    // console.log("data", newdata);
-    let p = document.createElement("div");
-    p.classList.add("trailer");
-    p.innerText = "SNEED";
+    let trailernode = document.createElement("div");
+    trailernode.classList.add("trailer");
 
-    document.getElementById("moviegrid").insertBefore(p, targetElem);
+    // console.log("target", targetElem, Math.floor(id / columns + 1) * columns);
+
+    document.getElementById("moviegrid").insertBefore(trailernode, targetElem);
+
+    ReactDOM.render(
+      <Trailer trailerdata={newdata[id]} item={id} />,
+      trailernode
+    );
   }
 
   return (
     <div id="moviegrid" className="moviegrid">
       {newdata.map((detail, idx) => {
         return (
-          <div
-            id={idx}
-            onClick={() => {
-              showTrailer(idx);
-            }}
-            className="moviegrid__card"
-          >
-            {detail.EventTitle}
-          </div>
+          <MovieCard id={idx} showTrailer={showTrailer} moviedetail={detail} />
         );
       })}
     </div>

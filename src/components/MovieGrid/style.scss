@@ -1,16 +1,13 @@
 .moviegrid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 100px;
-  background-color: rosybrown;
-
-  &__card {
-    border: 1px solid #333;
-  }
+  grid-auto-rows: auto;
+  gap: 20px;
+  margin: 0 calc(100vh / 12);
 }
 
 .trailer {
-  background-color: royalblue;
+  margin-top: 20px;
   grid-column: 1/7;
 }
 
