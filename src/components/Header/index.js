@@ -8,17 +8,6 @@ const Header = () => {
         <button className="btn green">Coming Soon</button>
         <button className="btn">Now Showing</button>
       </div>
-      {/* <div className="right">
-        <select value="Popular" name="" id="">
-          Popular
-        </select>
-        <select name="" id="">
-          English
-        </select>
-        <select name="" id="">
-          All Genres
-        </select>
-      </div> */}
     </div>
   );
 };

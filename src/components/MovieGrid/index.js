@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+import loader from "../../assets/loader.gif";
 import MovieCard from "../MovieCard";
 import { Trailer } from "../Trailer";
 import "./style.scss";
@@ -38,7 +38,7 @@ export const MovieGrid = ({ data }) => {
     );
   }
 
-  return (
+  return newdata.length ? (
     <div id="moviegrid" className="moviegrid">
       {newdata.map((detail, idx) => {
         return (
@@ -46,5 +46,7 @@ export const MovieGrid = ({ data }) => {
         );
       })}
     </div>
+  ) : (
+    <img src={loader} alt="" id="loader" />
   );
 };

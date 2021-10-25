@@ -1,15 +1,14 @@
 import { MovieGrid } from "./components/MovieGrid";
-import axios from "axios";
 import { useState, useEffect } from "react";
-import data from "./moviedata.json";
 import Header from "./components/Header";
+import movieapi from "./Api";
 
 function App() {
   const [moviesData, setMoviesData] = useState([]);
 
   const getData = () => {
-    axios
-      .get("https://peaceful-forest-62260.herokuapp.com/")
+    movieapi
+      .get("/")
       .then((response) => setMoviesData(response.data.moviesData));
   };
 
