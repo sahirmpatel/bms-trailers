@@ -9,7 +9,7 @@ export const MovieGrid = ({ data }) => {
 
   function showTrailer(id) {
     if (document.querySelector(".trailer")) {
-      console.log("found trailer,removing");
+      // console.log("found trailer,removing");
       document.querySelector(".trailer").remove();
     }
 
@@ -27,8 +27,6 @@ export const MovieGrid = ({ data }) => {
 
     let trailernode = document.createElement("div");
     trailernode.classList.add("trailer");
-
-    // console.log("target", targetElem, Math.floor(id / columns + 1) * columns);
 
     document.getElementById("moviegrid").insertBefore(trailernode, targetElem);
 
